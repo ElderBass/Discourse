@@ -1,0 +1,23 @@
+.linksContainer {
+    font-size: 24px;
+    flex: 0 0 25%;
+}
+
+.linksList {
+    list-style: none !important;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.login {
+    /* color: rgb(62, 90, 248); */
+    color: #E64398;
+    text-decoration: none !important;
+}
+
+.signup {
+    color: rgb(139, 144, 218);
+    text-decoration: none !important;
+}

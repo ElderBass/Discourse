@@ -1,0 +1,21 @@
+.monthContainer {
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #29012e;
+    margin: 0 auto 0 auto;
+    cursor: pointer;
+}
+
+.monthName {
+    color:  rgb(62, 90, 248);
+    font-size: 24px;
+    /* text-shadow: 0 0 .5px rgb(62, 90, 248), 0 0 .5px rgb(62, 90, 248), 0 0 .5px rgb(62, 90, 248), 0 0 .5px rgb(62, 90, 248); */
+}
+
+.isEven {
+    /* background:  rgb(62, 90, 248); */
+}

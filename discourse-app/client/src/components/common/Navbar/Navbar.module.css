@@ -1,0 +1,5 @@
+.navbar {
+    grid-area: navbar;
+    color:  #29012e;
+    font-size: 20px;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Discourse",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElderBass/Discourse.git"
+  },
+  "author": "Seth Zygarlicke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElderBass/Discourse/issues"
+  },
+  "homepage": "https://github.com/ElderBass/Discourse#readme",
+  "devDependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "node": "^17.0.1"
+  }
+}

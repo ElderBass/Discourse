@@ -1,0 +1,6 @@
+.homePageContainer {
+    grid-area: content;
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid rgb(139, 144, 218);
+}

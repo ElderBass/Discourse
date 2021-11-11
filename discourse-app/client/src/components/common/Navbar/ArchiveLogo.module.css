@@ -1,0 +1,12 @@
+.archiveLogo {
+    background: #29012e;
+    text-align: center;
+}
+
+.archiveHeader {
+    font-size: 38px;
+    color: #29012e;
+    /* color: rgb(139, 144, 218); */
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 0 2px rgb(62, 90, 248), 0 0 2px rgb(62, 90, 248), 0 0 2px rgb(62, 90, 248), 0 0 2px rgb(62, 90, 248);
+}

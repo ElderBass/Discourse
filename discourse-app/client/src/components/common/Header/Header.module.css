@@ -1,0 +1,18 @@
+.header {
+    padding: 20px;
+    background: var(--background-purple);
+    color: #29012e;
+    /* color: rgb(139, 144, 218); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: header;
+    height: 120px;
+}
+
+.logo {
+    flex: 1 0 auto;
+    font-size: 80px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
+}

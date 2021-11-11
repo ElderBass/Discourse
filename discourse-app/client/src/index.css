@@ -1,0 +1,28 @@
+/* body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+} */
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* background: rgb(66, 2, 75); */
+  --background-purple: #29012e;
+  --lighter-blue: rgb(139, 144, 218);
+  --logo-blue: rgb(62, 90, 248);
+  background: var(--background-purple);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* Link {
+  text-decoration: none !important;
+} */
