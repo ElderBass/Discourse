@@ -1,0 +1,22 @@
+@import '../../../index.css';
+
+.signupPage {
+    grid-area: page;
+    background: var(--background-purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px var(--electric-pink);
+}
+
+.signupHeader {
+    text-align: center;
+    font-size: 64px;
+    color: var(--background-purple);
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
+}

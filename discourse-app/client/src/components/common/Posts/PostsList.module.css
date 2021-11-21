@@ -1,0 +1,10 @@
+@import url('../../../index.css');
+
+.postsListContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--lighter-blue);
+}

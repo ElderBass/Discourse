@@ -8,10 +8,10 @@ const Links = (props) => {
         <div className={styles.linksContainer}>
             <ul className={styles.linksList}>
                 <li>
-                    <Link className={styles.login} to='/login'>Login</Link>
+                    <Link className={`link ${styles.login}`} to='/login'>Login</Link>
                 </li>
-                <li>
-                    <Link className={styles.signup} to='/signup'>Signup</Link>
+                <li className={`link ${styles.signup}`}>
+                    <Link className='link' to='/signup'>Signup</Link>
                 </li>
             </ul>
         </div>

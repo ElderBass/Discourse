@@ -1,0 +1,11 @@
+
+@import url('../../../index.css');
+
+.postContainer {
+  width: 100%;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 8px;
+  border: solid 2px var(--midnight-purple);
+  box-shadow: 3px 3px 3px 3px var(--midnight-purple);
+}

@@ -1,0 +1,75 @@
+@import '../../../index.css';
+
+.signupForm {
+  color: var(--logo-blue);
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  width: 80%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.inputField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.label {
+  flex: 0 0 30%;
+  font-family: 'Lobster', cursive;
+  color: var(--logo-blue);
+  /* text-shadow: 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue); */
+
+}
+
+.input {
+  flex: 1 0 70%;
+  height: 30px;
+  background: var(--lighter-blue);
+  color: var(--background-purple);
+  outline: none;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.confirmButton {
+  flex: 0 0 64px;
+  text-align: center;
+  color: var(--background-purple);
+  font-family: 'Lobster', cursive;
+  text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
+  text-decoration: none;
+  border: none;
+  font-size: 60px;
+}
+
+.confirmButton:hover {
+  cursor: pointer;
+  text-shadow: 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink);
+}
+
+.cancelButton {
+  color: var(--lighter-blue);
+  border: none;
+  background: var(--background-purple);
+  font-size: 28px;
+  width: 30%;
+  font-size: 20px;
+}
+
+.cancelButton:hover {
+  color: var(--electric-pink);
+  cursor: pointer;
+}
