@@ -1,14 +1,17 @@
+@import '../../../index.css';
+
 .postsContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px;
     background: var(--background-purple);
 }
 
 .postsLogo {
-    font-size: 60px;
+    text-align: center;
+    font-size: 72px;
     font-family: 'Lobster', cursive;
+    color: var(--background-purple);
     text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
 }

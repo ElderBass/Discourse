@@ -12,7 +12,7 @@ const Navbar = (props) => {
         <div className={styles.navbar}>
             <ArchiveLogo />
             {months.map(month => (
-                <Month month={month.name} isEven={month.isEven} />
+                <Month key={month.name} month={month.name} isEven={month.isEven} />
             ))}
         </div>
     );

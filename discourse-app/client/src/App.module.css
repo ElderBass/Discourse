@@ -1,13 +1,11 @@
 .mainContainer {
   display: grid;
   background: #29012e;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 100px auto;
-  /* width: 100vw;
-  height: 100vh; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px auto;
   grid-template-areas: 
-  "header header"
-  "content navbar";
+  "header"
+  "page";
   margin: -8px -8px -8px -8px;
   font-family: 'DM Serif Display', serif;
 }

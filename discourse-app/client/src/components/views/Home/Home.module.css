@@ -1,6 +1,17 @@
 .homePageContainer {
+    grid-area: page;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "content navbar";
+    width: 100%;
+}
+
+.homePageContent {
     grid-area: content;
-    width: 80%;
-    margin: 20px auto;
-    border: 2px solid rgb(139, 144, 218);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
 }

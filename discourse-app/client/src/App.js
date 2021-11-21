@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Header from './components/common/Header/Header.jsx.js';
-import Navbar from './components/common/Navbar/Navbar.jsx.js';
+import Header from './components/common/Header/Header.jsx';
 import Home from './components/views/Home';
 import Login from './components/views/Login';
-import Signup from './components/views/Signup';
+import Signup from './components/views/Signup/Signup.jsx';
 import styles from './App.module.css';
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
     <Router>
       <div className={styles.mainContainer}>
         <Header />
-        <Navbar />
         <Route exact path='/'>
           <Home />
         </Route>

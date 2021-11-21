@@ -1,5 +1,7 @@
+@import '../../../index.css';
+
 .header {
-    padding: 20px;
+    padding: 30px;
     background: var(--background-purple);
     color: #29012e;
     /* color: rgb(139, 144, 218); */
@@ -7,12 +9,18 @@
     justify-content: flex-start;
     align-items: center;
     grid-area: header;
-    height: 120px;
+    margin-bottom: 30px;
 }
 
 .logo {
+    text-decoration: none !important;
     flex: 1 0 auto;
     font-size: 80px;
     font-family: 'Lobster', cursive;
     text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
+}
+
+.logo:hover {
+    cursor: pointer;
+    text-shadow: 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink);
 }

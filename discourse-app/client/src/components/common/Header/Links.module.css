@@ -1,5 +1,7 @@
+@import '../../../index.css';
+
 .linksContainer {
-    font-size: 24px;
+    font-size: 28px;
     flex: 0 0 25%;
 }
 
@@ -13,11 +15,20 @@
 
 .login {
     /* color: rgb(62, 90, 248); */
-    color: #E64398;
-    text-decoration: none !important;
+    /* color: #E64398; */
+    color: var(--electric-pink);
+}
+
+.login:hover {
+    cursor: pointer;
+    color: var(--lighter-blue);
 }
 
 .signup {
-    color: rgb(139, 144, 218);
-    text-decoration: none !important;
+    color: var(--logo-blue);
+}
+
+.signup:hover {
+    cursor: pointer;
+    color: var(--lighter-blue);
 }
