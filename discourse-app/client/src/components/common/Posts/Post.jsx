@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Post.module.css';
 
 const Post = (props) => {
-  console.log('\n \n props = ', props, '\n \n');
+
   const {
     title,
     author,

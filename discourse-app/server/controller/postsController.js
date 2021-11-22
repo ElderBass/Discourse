@@ -1,7 +1,5 @@
 //const config = require("../config/dbconfig");
 const db = require("../models");
-const jwt = require("jsonwebtoken");
-// const bcrypt = require("bcryptjs");
 
 module.exports = {
   getAllPosts: function (req, res) {

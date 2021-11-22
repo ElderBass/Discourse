@@ -17,7 +17,7 @@ const Signup = (props) => {
 			setError('Password do not match.');
 			return;
 		}
-
+		console.log('\n \n form values = ', formValues, '\n \n');
 		API.addUser(formValues)
 			.then(result => {
 				console.log('\n result in addUser onSubmit = ', result, '\n');

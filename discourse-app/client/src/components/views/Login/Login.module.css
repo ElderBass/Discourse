@@ -1,6 +1,6 @@
 @import '../../../index.css';
 
-.signupPage {
+.loginPage {
     grid-area: page;
     background: var(--background-purple);
     display: flex;
@@ -13,7 +13,7 @@
     box-shadow: 4px -4px 4px 3px var(--electric-pink);
 }
 
-.signupHeader {
+.loginHeader {
     text-align: center;
     font-size: 64px;
     color: var(--background-purple);

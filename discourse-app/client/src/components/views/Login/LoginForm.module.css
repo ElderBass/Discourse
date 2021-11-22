@@ -1,6 +1,6 @@
 @import '../../../index.css';
 
-.signupForm {
+.loginForm {
   color: var(--logo-blue);
   font-size: 24px;
   display: flex;
@@ -57,7 +57,7 @@
   margin-top: 20px;
 }
 
-.confirmButton {
+.loginButton {
   flex: 0 0 64px;
   text-align: center;
   color: var(--background-purple);
@@ -68,7 +68,7 @@
   font-size: 60px;
 }
 
-.confirmButton:hover {
+.loginButton:hover {
   cursor: pointer;
   text-shadow: 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink);
 }

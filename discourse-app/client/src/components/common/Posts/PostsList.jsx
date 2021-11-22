@@ -7,16 +7,19 @@ const PostsList = (props) => {
 
   const [posts, setPosts] = useState([]);
 
-  useEffect(async () => {
-    try {
-      const response = await API.getAllPosts();
-      console.log('\n \n  response in useEffect get all posts = ', response, '\n \n ')
-      if (response.statusText === 'OK' && response.data.isSuccess) {
-        setPosts(response.data.posts);
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const response = await API.getAllPosts();
+        console.log('\n \n  response in useEffect get all posts = ', response, '\n \n ')
+        if (response.statusText === 'OK' && response.data.isSuccess) {
+          setPosts(response.data.posts);
+        }
+      } catch (err) {
+        console.log('\n \n error in retrieving all posts useEffect', err, '\n \n');
       }
-    } catch (err) {
-      console.log('\n \n error in retrieving all posts useEffect', err, '\n \n');
     }
+    fetchPosts();
   }, []);
 
   return (
@@ -24,7 +27,7 @@ const PostsList = (props) => {
       {posts.map(post => {
         return (
           <Post
-            key={post.postId}
+            key={post._id}
             author={post.author}
             body={post.body}
             comments={post.comments}

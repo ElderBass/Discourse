@@ -1,0 +1,8 @@
+@import url('../../../index.css');
+
+.username {
+  color: var(--electric-pink);
+  font-weight: 100;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+}

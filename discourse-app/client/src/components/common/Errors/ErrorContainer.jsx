@@ -1,5 +1,5 @@
 import React from 'react';
-import './ErrorContainer.module.css'
+import styles from './ErrorContainer.module.css'
 
 
 const ErrorContainer = (props) => {
@@ -7,7 +7,7 @@ const ErrorContainer = (props) => {
   const { errors } = props;
 
   return (
-    <div>
+    <div className={styles.errorContainer}>
       Error: Something went wrong bro.
     </div>
   );
