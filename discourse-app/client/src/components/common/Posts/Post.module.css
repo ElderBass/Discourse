@@ -7,5 +7,11 @@
   margin: 15px auto;
   border-radius: 8px;
   border: solid 2px var(--midnight-purple);
-  box-shadow: 3px 3px 3px 3px var(--midnight-purple);
+  box-shadow: -3px 3px 4px var(--midnight-purple);
+}
+
+.postContainer:hover {
+  cursor: pointer;
+  border: solid 2px var(--electric-pink);
+  box-shadow: -3px 3px 4px var(--electric-pink);
 }

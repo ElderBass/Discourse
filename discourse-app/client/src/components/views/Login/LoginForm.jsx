@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import styles from './SignupForm.module.css';
+import styles from './LoginForm.module.css';
 
-const SignupForm = (props) => {
+const LoginForm = (props) => {
 
 	const { onSubmit } = props;
 	const [formValues, setFormValues] = useState({
-		username: '',
 		email: '',
 		password: '',
-		confirmPassword: '',
 	});
 
 	const history = useHistory();
@@ -23,23 +21,25 @@ const SignupForm = (props) => {
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
-		onSubmit(formValues);
+
+		console.log('\n form values in login = ', formValues, '\n \n');
+		onSubmit(e, formValues);
 	};
 
 	const submitHandler = (e) => {
 		e.preventDefault();
 	};
 
-	const handleCancelSignup = () => {
+	const handleCancelLogin = () => {
 		history.push('/');
 	};
 
 	return (
-		<form className={styles.signupForm} onSubmit={submitHandler}>
-			<div className={styles.inputField}>
+		<form className={styles.loginForm} onSubmit={submitHandler}>
+			{/* <div className={styles.inputField}>
 				<label className={styles.label} htmlFor='username'></label>
 				<input className={styles.input} name='username' value={formValues.username} onChange={onChange} id='username' type='text' placeholder="Username" />
-			</div>
+			</div> */}
 			<div className={styles.inputField}>
 				<label className={styles.label} htmlFor='email'></label>
 				<input className={styles.input} name='email' value={formValues.email} onChange={onChange} id='email' type='text' placeholder="Email" />
@@ -48,18 +48,13 @@ const SignupForm = (props) => {
 				<label className={styles.label} htmlFor='password'></label>
 				<input className={styles.input} name='password' value={formValues.password} onChange={onChange} id='username' type='password' placeholder="Password" />
 			</div>
-			<div className={styles.inputField}>
-				<label className={styles.label} htmlFor='confirmPassword'></label>
-				<input className={styles.input} name='confirmPassword' value={formValues.confirmPassword} onChange={onChange} id='username' type='password'  placeholder="Confirm Password" />
-			</div>
 			<div className={styles.actions}>
-				<h3 className={styles.confirmButton} onClick={handleFormSubmit}>Confirm</h3>
-				<button className={styles.cancelButton} onClick={handleCancelSignup} type='button'>Cancel</button>
-
+				<h3 className={styles.loginButton} onClick={handleFormSubmit}>Login</h3>
+				<button className={styles.cancelButton} onClick={handleCancelLogin} type='button'>Cancel</button>
 			</div>
 		</form>
 
 	);
 }
 
-export default SignupForm;
+export default LoginForm;

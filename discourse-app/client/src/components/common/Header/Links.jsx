@@ -1,22 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './Links.module.css'
+import Username from './Username';
+import LogoutLink from './LogoutLink';
+import LoginSignupLinks from './LoginSignupLinks';
+import styles from './Links.module.css';
+import { connect } from 'react-redux';
 
 const Links = (props) => {
 
-    return (
-        <div className={styles.linksContainer}>
-            <ul className={styles.linksList}>
-                <li>
-                    <Link className={`link ${styles.login}`} to='/login'>Login</Link>
-                </li>
-                <li className={`link ${styles.signup}`}>
-                    <Link className='link' to='/signup'>Signup</Link>
-                </li>
-            </ul>
-        </div>
+	return (
+		<div className={styles.linksContainer}>
+			{props.isLoggedIn && <Username username={props.username} />}
+			<ul className={styles.linksList}>
+				{!props.isLoggedIn ? <LoginSignupLinks /> : <LogoutLink />}
+			</ul>
+		</div>
 
-    );
+	);
 }
 
-export default Links;
+function mapStateToProps(state) {
+	return {
+		username: state.user.username,
+		isLoggedIn: state.user.isLoggedIn,
+	};
+}
+
+export default connect(mapStateToProps)(Links);

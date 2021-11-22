@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import store from '../../../store';
 import styles from './Header.module.css'
 import Links from './Links';
 
@@ -12,9 +14,15 @@ const Header = (props) => {
                     Discourse
                 </Link>
             </h1>
-            <Links />
+            <Links userInfo={props.userInfo} />
         </div>
     );
 }
 
-export default Header;
+function mapStateToProps(state) {
+    return {
+        userInfo: state.user,
+    };
+}
+
+export default connect(mapStateToProps)(Header);

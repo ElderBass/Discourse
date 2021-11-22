@@ -14,6 +14,7 @@ function user(state = INITIAL_STATE, { type, payload }) {
                 ...state,
                 username: payload.username,
                 email: payload.email,
+                password: payload.password,
             };
         case UserActions.LOG_IN_USER:
             return {
@@ -22,6 +23,9 @@ function user(state = INITIAL_STATE, { type, payload }) {
                 authToken: payload.token,
                 isLoggedIn: true,
             };
+        case UserActions.LOG_OUT_USER:
+            console.log('is this happening ? log out user reducer');
+            return INITIAL_STATE;
         default:
             return state;
     }

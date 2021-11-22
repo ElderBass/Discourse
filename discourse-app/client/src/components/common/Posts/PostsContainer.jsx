@@ -6,8 +6,6 @@ import PostsList from './PostsList';
 
 const PostsContainer = (props) => {
 
-
-
 	return (
 		<div className={styles.postsContainer}>
 			<h1 className={styles.postsLogo}>

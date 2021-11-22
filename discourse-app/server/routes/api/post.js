@@ -28,7 +28,6 @@ app.route("/all").get(postsController.getAllPosts);
 
 // app.route("/changepicture").put(artistController.changePicture);
 
-// app.route("/:id").get(artistController.getOneArtist);
 
 // app.route("/message").put(artistController.leaveMessage);
 
