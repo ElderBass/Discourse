@@ -1,3 +1,12 @@
+.logoutHeader {
+  flex: 0 0 70px;
+  text-align: center;
+  font-size: 64px;
+  color: var(--background-purple);
+  font-family: 'Lobster', cursive;
+  text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
+}
+
 .actions {
   /* display: flex;
   flex-direction: column;

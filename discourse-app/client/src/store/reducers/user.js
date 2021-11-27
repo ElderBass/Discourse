@@ -5,6 +5,7 @@ const INITIAL_STATE = {
     email: '',
     authToken: '',
     isLoggedIn: false,
+    id: '',
 };
 
 function user(state = INITIAL_STATE, { type, payload }) {
@@ -20,6 +21,7 @@ function user(state = INITIAL_STATE, { type, payload }) {
             return {
                 username: payload.username,
                 email: payload.email,
+                id: payload._id,
                 authToken: payload.token,
                 isLoggedIn: true,
             };

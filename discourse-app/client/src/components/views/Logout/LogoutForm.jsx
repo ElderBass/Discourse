@@ -13,6 +13,9 @@ const LogoutForm = (props) => {
 
   return (
     <div className={styles.actions}>
+      <h1 className={styles.logoutHeader}>
+        We'll miss you :)
+      </h1>
       <h3 className={styles.logoutButton} onClick={onSubmit}>Logout</h3>
       <button className={styles.cancelButton} onClick={handleCancelLogout} type='button'>Cancel</button>
     </div>

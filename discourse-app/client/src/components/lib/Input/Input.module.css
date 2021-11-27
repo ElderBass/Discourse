@@ -1,0 +1,58 @@
+.inputField {
+  flex: 1 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.label {
+  flex: 0 0 auto;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+  color: var(--logo-blue);
+  /* text-shadow: 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue); */
+}
+
+.input {
+  flex: 1 0 20%;
+  max-width: 80%;
+  background: var(--lighter-blue);
+  color: var(--background-purple);
+  font-family: 'Lobster', cursive;
+  padding: 10px;
+  font-size: 48px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.input::placeholder {
+  color: var(--background-purple);
+  opacity: .7;
+}
+
+.input:focus {
+  border: solid 1.5px var(--electric-pink);
+}
+
+.textarea {
+  flex: 1 0 20%;
+  background: var(--lighter-blue);
+  color: var(--background-purple);
+  font-family: 'Lobster', cursive;
+  padding: 10px;
+  font-size: 48px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.textarea::placeholder {
+  color: var(--background-purple);
+  opacity: .7;
+}
+
+.textarea:focus {
+  border: solid 1.5px var(--electric-pink);
+}

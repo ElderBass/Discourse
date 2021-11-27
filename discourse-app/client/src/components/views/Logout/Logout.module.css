@@ -7,17 +7,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 60%;
+    width: 50%;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 4px -4px 4px 3px var(--electric-pink);
-}
-
-.logoutHeader {
-    flex: 0 0 70px;
-    text-align: center;
-    font-size: 64px;
-    color: var(--background-purple);
-    font-family: 'Lobster', cursive;
-    text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
+    border: solid .5px var(--electric-pink);
+    box-shadow: -4px 4px 2px var(--electric-pink);
 }

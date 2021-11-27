@@ -2,14 +2,14 @@
 
 .linksContainer {
     font-size: 28px;
-    flex: 0 0 30%;
+    flex: 0 1 40%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .linksList {
-    flex: 10 auto;
+    flex: 1 0 auto;
     list-style: none !important;
     display: flex;
     justify-content: space-evenly;

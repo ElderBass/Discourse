@@ -11,14 +11,13 @@ mongoose
  .then(() => console.log('DB Connected'))
  .catch(err => console.log('\n error = ', err, '\n'));
 
-
-
 const posts = [
   {
     id: '1',
     title: 'This is heavy, Doc.',
     description: 'We must go back to the future, everyone.',
     timestamp: moment().format('MMMM Do YYYY, h:mm:ss a'),
+    type: 'Observation',
     author: 'MartyMcFly',
     body: "Back to the Future is a 1985 American science fiction film directed by Robert Zemeckis. " +
       "Written by Zemeckis and Bob Gale, it stars Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover, " +

@@ -1,0 +1,36 @@
+.actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  /* margin-top: 20px; */
+}
+
+.submitButton {
+  text-align: center;
+  color: var(--background-purple);
+  font-family: 'Lobster', cursive;
+  text-shadow: 0 0 3px var(--neon-green), 0 0 3px var(--neon-green), 0 0 3px var(--neon-green), 0 0 3px var(--neon-green);
+  text-decoration: none;
+  border: none;
+  font-size: 60px;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  text-shadow: 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink);
+}
+
+.cancelButton {
+  color: var(--lighter-blue);
+  border: none;
+  background: var(--background-purple);
+  font-size: 20px;
+}
+
+.cancelButton:hover {
+  color: var(--electric-pink);
+  cursor: pointer;
+}

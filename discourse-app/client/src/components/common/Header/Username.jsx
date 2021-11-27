@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import styles from './Username.module.css'
 
 
 const Username = (props) => {
-  const { username } = props;
-  console.log('username ? ', username);
   // const [name, setName] = useState('');
 
   // useEffect(() => {
@@ -14,17 +13,24 @@ const Username = (props) => {
   // }, [username]);
 
   return (
-    <h6 className={styles.username}>
-      Welcome, {username}
-    </h6>
+    <>
+      <li>
+        <h6 className={styles.username}>
+          <span className={styles.welcome}>Welcome, </span> {props.username}
+        </h6>
+      </li>
+      <li>
+        <Link className={styles.profile} to={`/users/${props.username}`}>Profile</Link>
+      </li>
+    </>
 
   );
 }
 
 const mapStateToProps = state => {
-	return {
-		username: state.user.username,
-	};
+  return {
+    username: state.user.username,
+  };
 }
 
 export default connect(mapStateToProps)(Username);

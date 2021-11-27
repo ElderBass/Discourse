@@ -11,6 +11,8 @@ app.use(function(req, res, next) {
 });
 
 app.route("/all").get(postsController.getAllPosts);
+app.route("/create").post(postsController.createPost);
+
 
 // app.route("/about").put(artistController.addAbout);
 
