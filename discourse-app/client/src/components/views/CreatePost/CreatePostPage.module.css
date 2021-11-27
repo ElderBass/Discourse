@@ -1,0 +1,21 @@
+.createPostPage {
+  grid-area: page;
+  background: var(--background-purple);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60%;
+  padding-bottom: 20px;
+  margin: auto;
+  border: solid 1px var(--midnight-purple);
+  box-shadow: -4px 3px 4px 2px var(--midnight-purple);
+}
+
+.createPostHeader {
+  text-align: center;
+  font-size: 64px;
+  color: var(--background-purple);
+  font-family: 'Lobster', cursive;
+  text-shadow: 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink), 0 0 3px var(--electric-pink);
+}

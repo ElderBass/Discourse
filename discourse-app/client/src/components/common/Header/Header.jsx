@@ -11,7 +11,7 @@ const Header = (props) => {
         <div className={styles.header}>
             <h1 className={styles.logo}>
                 <Link className='link' to='/'>
-                    Discourse
+                    Ramble
                 </Link>
             </h1>
             <Links userInfo={props.userInfo} />

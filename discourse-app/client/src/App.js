@@ -5,6 +5,7 @@ import Login from './components/views/Login/Login.jsx';
 import Logout from './components/views/Logout/Logout.jsx';
 import Signup from './components/views/Signup/Signup.jsx';
 import styles from './App.module.css';
+import CreatePostPage from './components/views/CreatePost/CreatePostPage.jsx';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path='/signup'>
           <Signup />
+        </Route>
+        <Route exact path='/posts/create'>
+          <CreatePostPage />
         </Route>
       </div>
     </Router>

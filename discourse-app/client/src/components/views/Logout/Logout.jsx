@@ -16,9 +16,6 @@ const Logout = (props) => {
 
     return (
         <div className={styles.logoutPage}>
-            <h1 className={styles.logoutHeader}>
-               We'll miss you :)
-            </h1>
             <LogoutForm onSubmit={onSubmit} />
         </div>
     );

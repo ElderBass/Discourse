@@ -9,8 +9,8 @@ const Links = (props) => {
 
 	return (
 		<div className={styles.linksContainer}>
-			{props.isLoggedIn && <Username username={props.username} />}
 			<ul className={styles.linksList}>
+				{props.isLoggedIn && <Username username={props.username} />}
 				{!props.isLoggedIn ? <LoginSignupLinks /> : <LogoutLink />}
 			</ul>
 		</div>

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Form from '../../lib/Form/Form';
+import FormActions from '../../lib/Form/FormActions';
+import Input from '../../lib/Input/Input';
 import styles from './LoginForm.module.css';
 
 const LoginForm = (props) => {
@@ -24,6 +27,7 @@ const LoginForm = (props) => {
 
 		console.log('\n form values in login = ', formValues, '\n \n');
 		onSubmit(e, formValues);
+    setFormValues({});
 	};
 
 	const submitHandler = (e) => {
@@ -34,26 +38,42 @@ const LoginForm = (props) => {
 		history.push('/');
 	};
 
-	return (
-		<form className={styles.loginForm} onSubmit={submitHandler}>
-			{/* <div className={styles.inputField}>
-				<label className={styles.label} htmlFor='username'></label>
-				<input className={styles.input} name='username' value={formValues.username} onChange={onChange} id='username' type='text' placeholder="Username" />
-			</div> */}
-			<div className={styles.inputField}>
-				<label className={styles.label} htmlFor='email'></label>
-				<input className={styles.input} name='email' value={formValues.email} onChange={onChange} id='email' type='text' placeholder="Email" />
-			</div>
-			<div className={styles.inputField}>
-				<label className={styles.label} htmlFor='password'></label>
-				<input className={styles.input} name='password' value={formValues.password} onChange={onChange} id='username' type='password' placeholder="Password" />
-			</div>
-			<div className={styles.actions}>
-				<h3 className={styles.loginButton} onClick={handleFormSubmit}>Login</h3>
-				<button className={styles.cancelButton} onClick={handleCancelLogin} type='button'>Cancel</button>
-			</div>
-		</form>
+  const inputClasses = {
+    inputField: styles.inputField,
+    input: styles.input,
+    label: styles.label,
+    sethShouldFuckOff: true,
+  }
 
+	return (
+		<Form classes={styles.loginForm} onSubmit={submitHandler}>
+      <Input
+        classes={inputClasses}
+        id='email'
+        label='Email'
+        name='email'
+        onChange={onChange}
+        placeholder='valid email address'
+        type='text'
+        value={formValues.email}
+      />
+      <Input
+        classes={inputClasses}
+        id='login-password'
+        label='Password'
+        name='password'
+        onChange={onChange}
+        placeholder='enter password'
+        type='password'
+        value={formValues.password}
+      />
+      <FormActions
+        cancelText='Cancel'
+        confirmText='Login'
+        onCancel={handleCancelLogin}
+        onConfirm={handleFormSubmit}
+      />
+		</Form>
 	);
 }
 
