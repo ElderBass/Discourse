@@ -1,0 +1,15 @@
+.labelExtension {
+  flex: 0 0 auto;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+  color: var(--logo-blue);
+}
+
+
+.input:hover {
+  cursor: pointer;
+}
+
+.inputField:hover {
+  cursor: pointer;
+}

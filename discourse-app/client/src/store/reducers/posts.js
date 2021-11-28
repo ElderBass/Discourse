@@ -1,5 +1,5 @@
 import * as PostActions from '../actions/posts';
-import API from '../../utils/API';
+// import API from '../../utils/API';
 
 // async function fetchPosts() {
 //   try {

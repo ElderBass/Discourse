@@ -8,14 +8,14 @@ const Input = (props) => {
     classes = {},
     id,
     label,
-    labelExtension = {},
+    labelExtension = '',
     name,
     onChange,
     placeholder,
     type,
     value,
   } = props;
-
+  console.log('\n label extension = ', labelExtension, '\n');
   const classNames = classes ? classes : styles;
 
   return (
@@ -26,7 +26,11 @@ const Input = (props) => {
       >
         {label}
       </label>
-      {labelExtension.isPresent && labelExtension.extension}
+      {labelExtension.length > 0 &&
+        <div className={styles.labelExtension}>
+          {labelExtension}
+        </div>}
+      <br />
       <input
         className={classNames.input}
         id={id}

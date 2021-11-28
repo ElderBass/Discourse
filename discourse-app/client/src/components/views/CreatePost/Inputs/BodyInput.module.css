@@ -1,5 +1,6 @@
 .inputField {
   flex: 1 0 20%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,23 +18,25 @@
 
 }
 
-.input {
-  flex: 1 0 20%;
+.textarea {
+  flex: 1 0 auto;
+  height: 400px;
+  width: 100%;
   background: var(--lighter-blue);
   color: var(--background-purple);
   font-family: 'Lobster', cursive;
   padding: 10px;
-  font-size: 48px;
+  font-size: 24px;
   outline: none;
   border-radius: 5px;
 }
 
-.input::placeholder {
+.textarea::placeholder {
   color: var(--background-purple);
   opacity: .7;
 }
 
-.input:focus {
+.textarea:focus {
   border: solid 1.5px var(--electric-pink);
 }
 

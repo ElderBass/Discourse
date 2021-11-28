@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import FormActions from '../../lib/Form/FormActions';
 import styles from './SignupForm.module.css';
 
 const SignupForm = (props) => {
@@ -52,11 +53,15 @@ const SignupForm = (props) => {
 				<label className={styles.label} htmlFor='confirmPassword'></label>
 				<input className={styles.input} name='confirmPassword' value={formValues.confirmPassword} onChange={onChange} id='username' type='password'  placeholder="Confirm Password" />
 			</div>
-			<div className={styles.actions}>
+			{/* <div className={styles.actions}>
 				<h3 className={styles.confirmButton} onClick={handleFormSubmit}>Confirm</h3>
 				<button className={styles.cancelButton} onClick={handleCancelSignup} type='button'>Cancel</button>
-
-			</div>
+			</div> */}
+			<FormActions
+				confirmText='Confirm'
+				onCancel={handleCancelSignup}
+				onConfirm={handleFormSubmit}
+			/>
 		</form>
 
 	);

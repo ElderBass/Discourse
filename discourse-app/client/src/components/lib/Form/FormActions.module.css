@@ -1,9 +1,9 @@
 .actions {
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center; */
   text-align: center;
   /* margin-top: 20px; */
 }
@@ -16,6 +16,7 @@
   text-decoration: none;
   border: none;
   font-size: 60px;
+  padding: 0px;
 }
 
 .submitButton:hover {
@@ -24,10 +25,12 @@
 }
 
 .cancelButton {
+  padding: 0px;
   color: var(--lighter-blue);
   border: none;
   background: var(--background-purple);
   font-size: 20px;
+  line-height: 20px;
 }
 
 .cancelButton:hover {

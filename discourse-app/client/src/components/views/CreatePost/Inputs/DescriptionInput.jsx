@@ -1,12 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router';
 import Input from '../../../lib/Input/Input';
 import FormActions from '../../../lib/Form/FormActions';
 import styles from './DescriptionInput.module.css'
 
 const DescriptionInput = (props) => {
-  const { value, onChange, onClickNext } = props;
-  const history = useHistory();
+  const { value, onChange, onShowHide } = props;
+
   const propValues = {
     classes: {
       inputField: styles.inputField,
@@ -15,30 +14,35 @@ const DescriptionInput = (props) => {
     },
     id: 'description',
     label: 'Description',
+    labelExtension: 'Briefly describe the crux of your post (optional)',
     name: 'description',
     onChange,
-    placeholder: 'enter description',
+    placeholder: 'limit 100 characters',
     type: 'text',
     value,
   };
 
   const onCancel = () => {
-    history.push('/');
+    const showHideObject = {
+      description: false,
+      postType: true,
+    }
+    onShowHide(showHideObject);
   };
 
   const onConfirm = () => {
     const showHideObject = {
       description: false,
-      postType: true,
+      body: true,
     }
-    onClickNext(showHideObject);
+    onShowHide(showHideObject);
   };
 
   return (
     <React.Fragment>
       <Input {...propValues} />
       <FormActions
-        cancelText='Cancel'
+        cancelText='Back'
         confirmText='Next'
         onCancel={onCancel}
         onConfirm={onConfirm}

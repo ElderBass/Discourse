@@ -18,6 +18,7 @@ html {
   overflow-x: hidden;
   /* background: rgb(66, 2, 75); */
   background: var(--background-purple);
+  scroll-behavior: smooth;
 }
 *,
 *::before,

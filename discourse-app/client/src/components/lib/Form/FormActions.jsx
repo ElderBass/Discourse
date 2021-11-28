@@ -4,7 +4,7 @@ import styles from './FormActions.module.css';
 
 const FormActions = (props) => {
   const {
-    cancelText,
+    cancelText = 'Cancel',
     confirmText,
     onCancel,
     onConfirm,
@@ -13,7 +13,7 @@ const FormActions = (props) => {
   return (
     <div className={styles.actions}>
       <h3 className={styles.submitButton} onClick={onConfirm}>{confirmText}</h3>
-      <button className={styles.cancelButton} onClick={onCancel} type='button'>{cancelText}</button>
+      <h6 className={styles.cancelButton} onClick={onCancel} type='button'>{cancelText || 'Cancel'}</h6>
     </div>
   );
 }

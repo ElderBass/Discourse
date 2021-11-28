@@ -10,6 +10,8 @@
     width: 60%;
     margin: 20px auto;
     border: solid 1px var(--electric-pink);
+    box-shadow: -4px 4px 4px 3px var(--midnight-purple);
+
 }
 
 .loginHeader {

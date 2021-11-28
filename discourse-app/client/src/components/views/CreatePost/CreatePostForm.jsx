@@ -6,9 +6,8 @@ import TitleInput from './Inputs/TitleInput';
 import PostTypeInput from './Inputs/PostTypeInput';
 import DescriptionInput from './Inputs/DescriptionInput';
 import BodyInput from './Inputs/BodyInput';
-import FormActions from '../../lib/Form/FormActions';
-import styles from './CreatePostForm.module.css';
 import ConfirmInput from './Inputs/ConfirmInput';
+// import styles from './CreatePostForm.module.css';
 
 const CreatePostForm = (props) => {
   const { onSubmit } = props;
@@ -33,14 +32,14 @@ const CreatePostForm = (props) => {
   const [formValues, setFormValues] = useState(FORM_STATE);
 
   const onChangeHandler = e => {
-    setFormValues(preValues => ({
-      ...preValues,
-      [e.target.name]: e.target.value,
-    }));
+    console.log('\n e.target.name = ', e.target.name, '\n ');
+      setFormValues(preValues => ({
+        ...preValues,
+        [e.target.name]: e.target.value,
+      }));
   };
 
-  const clickNextHandler = (showHideObject) => {
-    console.log('\n \n show hide object -= ', showHideObject, '\n \n');
+  const showHideHandler = (showHideObject) => {
     setShowInput(prevState => ({
       ...prevState,
       ...showHideObject,
@@ -51,9 +50,17 @@ const CreatePostForm = (props) => {
     e.preventDefault();
   };
 
-  const handleFormSubmit = () => {
-    onSubmit(formValues);
-    setFormValues(FORM_STATE);
+  const handleFormSubmit = async () => {
+    const result = await onSubmit(formValues);
+    console.log('\n \n result in handle form submit create post ', result, '\n \n');
+    if (result.isSuccess) {
+      setFormValues(FORM_STATE);
+      setError('');
+      history.push('/');
+      return;
+    } else {
+      setError(result.error);
+    }
   };
 
   const handleCancelSubmit = () => {
@@ -66,28 +73,28 @@ const CreatePostForm = (props) => {
       {error.length > 0 && <ErrorContainer errors={error} />}
       {showInput.title &&
         <TitleInput
-          onClickNext={clickNextHandler}
+          onShowHide={showHideHandler}
           value={formValues.title}
           onChange={onChangeHandler}
         />
       }
       {showInput.description &&
         <DescriptionInput
-          onClickNext={clickNextHandler}
+          onShowHide={showHideHandler}
           value={formValues.description}
           onChange={onChangeHandler}
         />
       }
       {showInput.postType &&
         <PostTypeInput
-          onClickNext={clickNextHandler}
+          onShowHide={showHideHandler}
           value={formValues.postType}
           onChange={onChangeHandler}
         />
       }
       {showInput.body &&
         <BodyInput
-          onClickNext={clickNextHandler}
+          onShowHide={showHideHandler}
           value={formValues.body}
           onChange={onChangeHandler}
         />
@@ -99,7 +106,6 @@ const CreatePostForm = (props) => {
           onConfirm={handleFormSubmit}
         />
       }
-
     </Form>
   );
 }

@@ -7,12 +7,13 @@ const Post = (props) => {
   const {
     title,
     author,
-    postId,
-    userId,
-    description,
     body,
-    likes,
-    comments,
+    // postId,
+    // postType,
+    // userId,
+    // description,
+    // likes,
+    // comments,
     timestamp
   } = props;
 

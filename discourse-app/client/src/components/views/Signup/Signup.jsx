@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import store from '../../../store';
 import API from '../../../utils/API';
@@ -10,6 +10,12 @@ import SignupForm from './SignupForm';
 const Signup = (props) => {
 	const [error, setError] = useState('');
 	const history = useHistory();
+	const signupFormEl = useRef(null);
+
+	useEffect(() => {
+		signupFormEl.current.scrollIntoView();
+	}, []);
+
 
 	const onSubmit = formValues => {
 		const { password, confirmPassword } = formValues;
@@ -31,7 +37,7 @@ const Signup = (props) => {
 	};
 
 	return (
-		<div className={styles.signupPage}>
+		<div ref={signupFormEl} className={styles.signupPage}>
 			<h1 className={styles.signupHeader}>
 				Join the Conversation
 			</h1>
