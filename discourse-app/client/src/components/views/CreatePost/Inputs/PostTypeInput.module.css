@@ -10,31 +10,48 @@
 
 .label {
   flex: 0 0 auto;
-  font-size: 30px;
+  font-size: 50px;
   font-family: 'Lobster', cursive;
   color: var(--logo-blue);
   /* text-shadow: 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue); */
+}
 
+.labelExtension {
+  flex: 0 0 auto;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+  color: var(--logo-blue);
 }
 
 .input {
-  flex: 1 0 20%;
+  flex: 1 0 60px;
+  margin-top: 10px;
+  max-height: 70px;
   background: var(--lighter-blue);
   color: var(--background-purple);
   font-family: 'Lobster', cursive;
   padding: 10px;
-  font-size: 48px;
+  width: 100%;
+  font-size: 36px;
   outline: none;
   border-radius: 5px;
 }
 
 .input::placeholder {
-  color: var(--background-purple);
+  color: var(--midnight-purple);
   opacity: .7;
 }
 
 .input:focus {
   border: solid 1.5px var(--electric-pink);
+}
+
+.input:hover {
+  cursor: pointer;
+}
+
+.option:hover {
+  cursor: pointer;
 }
 
 .actions {

@@ -16,9 +16,18 @@
   /* text-shadow: 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue), 0 0 1px var(--logo-blue); */
 }
 
+.labelExtension {
+  flex: 0 0 auto;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+  color: var(--logo-blue);
+}
+
+
 .input {
-  flex: 1 0 20%;
+  flex: 1 0 auto;
   max-width: 80%;
+  max-height: 60px;
   background: var(--lighter-blue);
   color: var(--background-purple);
   font-family: 'Lobster', cursive;

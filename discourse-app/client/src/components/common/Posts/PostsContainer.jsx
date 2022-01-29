@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import API from '../../../utils/API';
+import React from 'react';
+// import API from '../../../utils/API';
 
 import styles from './PostsContainer.module.css';
 import PostsList from './PostsList';

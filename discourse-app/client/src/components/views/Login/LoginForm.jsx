@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Form from '../../lib/Form/Form';
 import FormActions from '../../lib/Form/FormActions';
 import Input from '../../lib/Input/Input';
@@ -7,7 +7,7 @@ import styles from './LoginForm.module.css';
 
 const LoginForm = (props) => {
 
-	const { onSubmit } = props;
+	const { onSubmit, ref } = props;
 	const [formValues, setFormValues] = useState({
 		email: '',
 		password: '',
@@ -46,7 +46,7 @@ const LoginForm = (props) => {
   }
 
 	return (
-		<Form classes={styles.loginForm} onSubmit={submitHandler}>
+		<Form ref={ref} classes={styles.loginForm} onSubmit={submitHandler}>
       <Input
         classes={inputClasses}
         id='email'
@@ -67,6 +67,11 @@ const LoginForm = (props) => {
         type='password'
         value={formValues.password}
       />
+      <div>
+        <Link to='/signup'>
+          <h3>Not a member? <span className={styles.signupSpan}>Signup</span></h3>
+        </Link>
+      </div>
       <FormActions
         cancelText='Cancel'
         confirmText='Login'

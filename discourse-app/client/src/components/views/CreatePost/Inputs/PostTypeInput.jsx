@@ -1,22 +1,49 @@
 import React from 'react';
+import FormActions from '../../../lib/Form/FormActions';
+import SelectInput from '../../../lib/Input/SelectInput';
 
 import styles from './PostTypeInput.module.css'
 
 const PostTypeInput = (props) => {
-  const { value, onChange, onClickNext } = props;
+  const { onChange, onShowHide, value } = props;
+
+  const inputProps = {
+    id: 'postTypeInput',
+    label: 'Post Type',
+    labelExtension: 'Choose what kind of post this will be',
+    name: 'postType',
+    onChange,
+    styles,
+    value,
+  };
+
+  
+  const onCancel = () => {
+    const showHideObject = {
+      postType: false,
+      title: true,
+    }
+    onShowHide(showHideObject);
+  };
+
+  const onConfirm = () => {
+    const showHideObject = {
+      postType: false,
+      description: true,
+    }
+    onShowHide(showHideObject);
+  };
 
   return (
-    <div className={styles.inputField}>
-      <label className={styles.label} htmlFor='postType'>Post Type: <br /> What is the main topic of conversation? </label>
-      <input
-        id='postTypeInput'
-        className={styles.input}
-        name='postType'
-        value={value}
-        onChange={onChange}
-        placeholder='question/hypothesis/observation'
+    <React.Fragment>
+      <SelectInput {...inputProps} />
+      <FormActions
+        cancelText='Back'
+        confirmText='Next'
+        onCancel={onCancel}
+        onConfirm={onConfirm}
       />
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import store from '../../../store';
+// import store from '../../../store';
 import styles from './Header.module.css'
 import Links from './Links';
 
@@ -11,7 +11,7 @@ const Header = (props) => {
         <div className={styles.header}>
             <h1 className={styles.logo}>
                 <Link className='link' to='/'>
-                    Ramble
+                    Palaver
                 </Link>
             </h1>
             <Links userInfo={props.userInfo} />

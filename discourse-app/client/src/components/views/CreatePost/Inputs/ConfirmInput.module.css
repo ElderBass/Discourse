@@ -1,0 +1,13 @@
+@import url('../../../../index.css');
+
+.h6 {
+  color: var(--electric-pink);
+  font-family: 'Lobster' cursive;
+}
+
+.postValue {
+  color: var(--lighter-blue);
+}
+.body {
+  color: var(--lighter-blue)
+}

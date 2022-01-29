@@ -31,8 +31,9 @@
 
 .input {
   flex: 1 0 20%;
+  max-height: 60px;
   background: var(--lighter-blue);
-  color: var(--background-purple);
+  color: var(--midnight-purple);
   font-family: 'Lobster', cursive;
   padding: 10px;
   font-size: 48px;
@@ -41,7 +42,7 @@
 }
 
 .input::placeholder {
-  color: var(--background-purple);
+  color: var(--midnight-purple);
   opacity: .7;
 }
 
@@ -52,17 +53,16 @@
 .actions {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
 }
 
 .confirmButton {
-  flex: 0 0 64px;
+  flex: 0 0 50px;
   text-align: center;
   color: var(--background-purple);
   font-family: 'Lobster', cursive;
-  text-shadow: 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue), 0 0 3px var(--logo-blue);
+  text-shadow: 0 0 3px var(--neon-green), 0 0 3px var(--neon-green), 0 0 3px var(--neon-green), 0 0 3px var(--neon-green);
   text-decoration: none;
   border: none;
   font-size: 60px;
@@ -77,8 +77,6 @@
   color: var(--lighter-blue);
   border: none;
   background: var(--background-purple);
-  font-size: 28px;
-  width: 30%;
   font-size: 20px;
 }
 

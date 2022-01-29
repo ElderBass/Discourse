@@ -6,7 +6,7 @@ import Input from '../../../lib/Input/Input';
 import styles from './TitleInput.module.css'
 
 const TitleInput = (props) => {
-  const { onClickNext, onChange, value } = props;
+  const { onShowHide, onChange, value } = props;
   const history = useHistory();
 
   const propValues = {
@@ -19,7 +19,7 @@ const TitleInput = (props) => {
     label: 'Give It a Title',
     name: 'title',
     onChange,
-    placeholder: '(limit 30 characters)',
+    placeholder: '(limit 50 characters)',
     type: 'text',
     value,
   };
@@ -31,10 +31,10 @@ const TitleInput = (props) => {
   const onConfirm = () => {
     const showHideObject = {
       title: false,
-      description: true,
+      postType: true,
     }
-    onClickNext(showHideObject);
-  }
+    onShowHide(showHideObject);
+  };
 
   return (
     <React.Fragment>

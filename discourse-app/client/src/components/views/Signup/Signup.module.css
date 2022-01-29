@@ -9,8 +9,8 @@
     align-items: center;
     width: 60%;
     margin: auto;
-    border-radius: 10px;
-    box-shadow: 4px -4px 4px 3px var(--electric-pink);
+    border: solid 1px var(--neon-green);
+    box-shadow: -4px 4px 4px 3px var(--midnight-purple);
 }
 
 .signupHeader {
